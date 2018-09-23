@@ -39,6 +39,12 @@ h6 {
 .flex {
     display: flex;
 }
+a {
+    color: inherit;
+}
+a:hover {
+    color: #30c1d2;
+}
 
 .c1 {
     position: relative;
@@ -48,7 +54,12 @@ h6 {
     position: relative;
     width: 48%;
 }
-
+a {
+    color: black;
+}
+a:hover {
+    color: #30c1d2;
+}
 .right {
     float: right;
 }
