@@ -1,41 +1,48 @@
-<div class="row">
-    <div class="col-md-3">
-        <span class="hipster img-fluid rounded"></span>
+<div class="container-positioning">
+    <div class="content-container">
+        <div class="content c1">
+            <h2>
+                <span>Finding a Job</span>
+            </h2>
+            <h6>
+                Many quality companies across the nation hire workers with criminal backgrounds to assist with
+                reintegration into their communities. To search for jobs in your area, select a state, the radius of
+                your
+                search, a field in which you have relevant skills, and a company from the dropdowns below.
+            </h6>
+            <button>View Jobs</button>
+
+        </div>
     </div>
-    <div class="col-md-9">
-        <h1 class="display-4">Welcome, Java Hipster!</h1>
-        <p class="lead">This is your homepage</p>
 
-        <div [ngSwitch]="isAuthenticated()">
-            <div class="alert alert-success" *ngSwitchCase="true">
-                <span id="home-logged-message" *ngIf="account"
-                   > You are logged in as user "{{account.login}}". </span>
-            </div>
 
-            <div class="alert alert-warning" *ngSwitchCase="false">
-                <span>If you want to </span>
-                <a class="alert-link" (click)="login()">sign in</a><span>, you can try the default accounts:<br/>- Administrator (login="admin" and password="admin") <br/>- User (login="user" and password="user").</span>
-            </div>
-            <div class="alert alert-warning" *ngSwitchCase="false">
-                <span>You don't have an account yet?</span>&nbsp;
-                <a class="alert-link" routerLink="register">Register a new account</a>
-            </div>
+    <div class="content-container">
+        <div class="content c2 right">
+            <h2>
+                <span>Reentry Programs</span>
+            </h2>
+            <h6>
+                Find reentry programs near you to assist you as you transition from prison to a fulfilling life.
+            </h6>
+            <button>View Programs</button>
         </div>
 
-        <p>
-            If you have any question on JHipster:
-        </p>
-
-        <ul>
-            <li><a href="https://www.jhipster.tech/" target="_blank" rel="noopener">JHipster homepage</a></li>
-            <li><a href="http://stackoverflow.com/tags/jhipster/info" target="_blank" rel="noopener">JHipster on Stack Overflow</a></li>
-            <li><a href="https://github.com/jhipster/generator-jhipster/issues?state=open" target="_blank" rel="noopener">JHipster bug tracker</a></li>
-            <li><a href="https://gitter.im/jhipster/generator-jhipster" target="_blank" rel="noopener">JHipster public chat room</a></li>
-            <li><a href="https://twitter.com/java_hipster" target="_blank" rel="noopener">follow @java_hipster on Twitter</a></li>
-        </ul>
-
-        <p>
-            <span>If you like JHipster, don't forget to give us a star on</span> <a href="https://github.com/jhipster/generator-jhipster" target="_blank" rel="noopener">GitHub</a>!
-        </p>
+        <div class="content c2 left">
+            <h2>
+                <span>Resources</span>
+            </h2>
+            <h6>
+                Browse services that provide professional
+                attire, interview training, resume templates
+                and tips, and online training to make the best
+                impression during your job search.
+            </h6>
+            <button>View Resources</button>
+        </div>
     </div>
+
 </div>
+
+
+
+
