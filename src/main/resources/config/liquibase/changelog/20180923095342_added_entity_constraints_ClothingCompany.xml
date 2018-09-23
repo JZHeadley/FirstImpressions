@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <!--
+        Added the constraints for entity ClothingCompany.
+    -->
+    <changeSet id="20180923095342-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="company_location_id"
+                                 baseTableName="clothing_company"
+                                 constraintName="fk_clothing_company_company_location_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="location"/>
+
+    </changeSet>
+</databaseChangeLog>

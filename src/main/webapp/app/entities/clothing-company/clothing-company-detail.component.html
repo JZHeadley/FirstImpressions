@@ -1,0 +1,37 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="clothingCompany">
+            <h2><span>Clothing Company</span> {{clothingCompany.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Company Name</span></dt>
+                <dd>
+                    <span>{{clothingCompany.companyName}}</span>
+                </dd>
+                <dt><span>Company Desc</span></dt>
+                <dd>
+                    <span>{{clothingCompany.companyDesc}}</span>
+                </dd>
+                <dt><span>Company Location</span></dt>
+                <dd>
+                    <div *ngIf="clothingCompany.companyLocation">
+                        <a [routerLink]="['/location', clothingCompany.companyLocation?.id, 'view']">{{clothingCompany.companyLocation?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/clothing-company', clothingCompany.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

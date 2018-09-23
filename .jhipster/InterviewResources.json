@@ -1,0 +1,23 @@
+{
+    "name": "InterviewResources",
+    "fields": [
+        {
+            "fieldName": "resourceLink",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "desc",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20180923095344",
+    "entityTableName": "interview_resources",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

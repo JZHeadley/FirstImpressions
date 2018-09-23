@@ -1,0 +1,35 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="program">
+            <h2><span>Program</span> {{program.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Program Title</span></dt>
+                <dd>
+                    <span>{{program.programTitle}}</span>
+                </dd>
+                <dt><span>Program Link</span></dt>
+                <dd>
+                    <span>{{program.programLink}}</span>
+                </dd>
+                <dt><span>Program Desc</span></dt>
+                <dd>
+                    <span>{{program.programDesc}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/program', program.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

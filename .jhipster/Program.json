@@ -1,0 +1,27 @@
+{
+    "name": "Program",
+    "fields": [
+        {
+            "fieldName": "programTitle",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "programLink",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "programDesc",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20180923095340",
+    "entityTableName": "program",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}
