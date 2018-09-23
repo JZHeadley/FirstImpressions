@@ -10,7 +10,8 @@ import { InterviewResourcesService } from './interview-resources.service';
 
 @Component({
     selector: 'jhi-interview-resources',
-    templateUrl: './interview-resources.component.html'
+    templateUrl: './interview-resources.component.html',
+    styleUrls: ['interview-resources.component.scss']
 })
 export class InterviewResourcesComponent implements OnInit, OnDestroy {
     interviewResources: IInterviewResources[];
