@@ -24,7 +24,6 @@ h6 {
     margin: 0 auto;
 }
 .content {
-    text-align: center;
     padding: 5% 5%;
     background: rgba(255, 255, 255, 0.9);
     border-radius: 2px;
@@ -76,7 +75,7 @@ button:hover {
 }
 .container-positioning {
     position: absolute;
-    top: 25%;
+    top: 20%;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -84,6 +83,7 @@ button:hover {
 
 h2 {
     font-size: 20px;
+    color: #353d47;
 }
 h6 {
     font-size: 14px;
@@ -94,12 +94,12 @@ h6 {
     width: 60%;
 }
 .content {
-    padding: 2% 2%;
+    padding: 4% 4%;
     margin: 2% 1% 0% 1%;
     background-color: white;
     border-radius: 2px;
     box-shadow: 0px 2px 5px #777678;
-    min-height: 200px;
+    min-height: 230px;
 }
 .flex {
     display: flex;
@@ -113,9 +113,6 @@ h6 {
     position: relative;
     width: 48%;
 }
-.content:hover {
-    outline: solid 4px #30c1d2;
-}
 
 .right {
     float: right;
@@ -126,7 +123,7 @@ h6 {
 
 button {
     position: absolute;
-    bottom: 10%;
+    bottom: 14%;
     background-color: #30c1d2;
     border-radius: 2px;
     color: white;
@@ -134,8 +131,8 @@ button {
     border: none;
     padding: 5px 10px;
     width: 150px;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.1s ease-in-out;
 }
 button:hover {
-    background-color: #2397a5;
+    background-color: #353d47;
 }
