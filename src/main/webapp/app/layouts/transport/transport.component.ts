@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
     selector: 'jhi-transport',
     templateUrl: './transport.component.html',
-    styles: []
+    styleUrls: ['transport.component.scss']
 })
 export class TransportComponent implements OnInit {
     constructor() {}

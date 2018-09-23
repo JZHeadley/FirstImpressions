@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
     selector: 'jhi-finance',
     templateUrl: './finance.component.html',
-    styles: []
+    styleUrls: ['finance.component.scss']
 })
 export class FinanceComponent implements OnInit {
     constructor() {}
