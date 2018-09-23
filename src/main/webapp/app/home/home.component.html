@@ -2,7 +2,7 @@
     <div class="content-container">
         <div class="content c1">
             <h2>
-                <span>Finding a Job</span>
+                <span routelink="job">Finding a Job</span>
             </h2>
             <h6>
                 Many quality companies across the nation hire workers with criminal backgrounds to assist with
@@ -10,7 +10,7 @@
                 your
                 search, a field in which you have relevant skills, and a company from the dropdowns below.
             </h6>
-            <button>View Jobs</button>
+            <button routerLink="job" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">View Jobs</button>
 
         </div>
     </div>
@@ -24,7 +24,7 @@
             <h6>
                 Find reentry programs near you to assist you as you transition from prison to a fulfilling life.
             </h6>
-            <button>View Programs</button>
+            <button routerLink="program" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">View Programs</button>
         </div>
 
         <div class="content c2 left">
@@ -37,7 +37,7 @@
                 and tips, and online training to make the best
                 impression during your job search.
             </h6>
-            <button>View Resources</button>
+            <button routerLink="interview-resources" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">View Resources</button>
         </div>
     </div>
 
