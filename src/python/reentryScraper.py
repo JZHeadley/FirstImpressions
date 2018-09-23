@@ -1,24 +1,19 @@
 import requests
 from bs4 import BeautifulSoup
 import json
-
 class State:
     def __init__(self):
         self.Name = ""
         self.Programs = []
-
     def __str__(self):
         return Name + str(Programs)
-
 class ReentryProgram:
     def __init__(self, title, link, description):
         self.title = title
         self.link = link
         self.description = description
-
     def __str__(self):
         return str(self.title) + " ;; " + str(self.link) + " ;; " + str(self.description)
-
 def scrape_page(page_soup):
     reentry_soup = page_soup.find_all('div', class_='fusion-text')
     allStates = []
@@ -28,20 +23,17 @@ def scrape_page(page_soup):
             continue
         else:
             final_soup = soup
-
-
     for soup in final_soup:
         if soup.name == 'h3':
             if currentState.Programs.__len__() == 0:
                 print("")
             else:
                 allStates.append(currentState)
-                
+
             currentState = State()
             currentState.Name = soup.get_text()
             currentState.Programs = []
             print("#!" + currentState.Name)
-
         elif soup.name == 'p':
             if soup.find_all('a').__len__() == 0:
                 continue
@@ -57,15 +49,12 @@ def scrape_page(page_soup):
                     continue
             rp = ReentryProgram(soup.find('a').get_text(), link, soup.get_text())
             currentState.Programs.append(rp)
-            print(rp)
     return allStates
-
-
 def post_programs(programs):
   for state in programs:
+      stateName = state.Name
       for program in state.Programs:
-          requests.post("http://localhost:9060/api/programs", headers={'content-type': 'application/json'}, data=json.dumps({'programTitle':program.title,'programLink':program.link,'programDesc':program.description}))
-          
+          requests.post("http://localhost:9060/api/programs", headers={'content-type': 'application/json'}, data=json.dumps({'programTitle':program.title,'programLink':program.link,'programDesc':program.description, 'programState':stateName}))
 
 if __name__ == '__main__':
     programs_list = []

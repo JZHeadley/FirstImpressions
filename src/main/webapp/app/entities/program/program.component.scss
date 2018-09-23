@@ -1,0 +1,71 @@
+/* wait autoprefixer update to allow simple generation of high pixel density media query */
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (min--moz-device-pixel-ratio: 2),
+    only screen and (-o-min-device-pixel-ratio: 2/1),
+    only screen and (min-device-pixel-ratio: 2),
+    only screen and (min-resolution: 192dpi),
+    only screen and (min-resolution: 2dppx) {
+}
+.container-positioning {
+    top: 20%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+h2 {
+    font-size: 20px;
+    color: #353d47;
+}
+h6 {
+    font-size: 14px;
+    font-weight: 200;
+    margin-bottom: 1.5rem;
+}
+h5 {
+    font-size: 12px;
+    font-weight: 200;
+    margin-bottom: 1.5rem;
+}
+.content-container {
+    width: 60%;
+}
+.content {
+    padding: 4% 4%;
+    margin: 2% 1% 0% 1%;
+    background-color: white;
+    border-radius: 2px;
+    box-shadow: 0px 2px 5px #777678;
+    min-height: 230px;
+}
+.flex {
+    display: flex;
+}
+
+.c1 {
+    position: relative;
+    width: 98%;
+}
+.c2 {
+    position: relative;
+    width: 48%;
+}
+
+.right {
+    float: right;
+}
+.left {
+    float: left;
+}
+
+button {
+    background-color: #30c1d2;
+    border-radius: 2px;
+    color: white;
+    font-size: 14px;
+    border: none;
+    padding: 5px 15px;
+}
+button:hover {
+    background-color: #353d47;
+}

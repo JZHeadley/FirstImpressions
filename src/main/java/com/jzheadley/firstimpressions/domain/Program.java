@@ -33,6 +33,9 @@ public class Program implements Serializable {
     @Column(name = "program_desc")
     private String programDesc;
 
+    @Column(name = "program_state")
+    private String programState;
+
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
         return id;
@@ -80,6 +83,19 @@ public class Program implements Serializable {
     public void setProgramDesc(String programDesc) {
         this.programDesc = programDesc;
     }
+
+    public String getProgramState() {
+        return programState;
+    }
+
+    public Program programState(String programState) {
+        this.programState = programState;
+        return this;
+    }
+
+    public void setProgramState(String programState) {
+        this.programState = programState;
+    }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 
     @Override
@@ -109,6 +125,7 @@ public class Program implements Serializable {
             ", programTitle='" + getProgramTitle() + "'" +
             ", programLink='" + getProgramLink() + "'" +
             ", programDesc='" + getProgramDesc() + "'" +
+            ", programState='" + getProgramState() + "'" +
             "}";
     }
 }

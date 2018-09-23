@@ -1,75 +1,47 @@
 <div class="container-positioning">
     <div class="content-container">
         <div class="content">
-        <h2>
-            <span>Job Search</span>
-        </h2>
-        <jhi-alert></jhi-alert>
-        <div class="row">
-            <div class="col-sm-12">
-                <form name="searchForm" class="form-inline">
-                    <div class="input-group w-100 mt-3">
-                        <input type="text" class="form-control" [(ngModel)]="currentSearch" id="currentSearch" name="currentSearch" placeholder="Search">
-                        <button class="input-group-append btn btn-info" (click)="search(currentSearch)">
-                            <fa-icon [icon]="'search'"></fa-icon>
-                        </button>
-                        <button class="input-group-append btn btn-danger" (click)="clear()" *ngIf="currentSearch">
-                            <fa-icon [icon]="'trash-alt'"></fa-icon>
-                        </button>
-                    </div>
-                </form>
-            </div>
-        </div>
-        <br/>
-        <div class="table-responsive" *ngIf="jobs">
-            <table class="table table-striped">
-                <thead>
-                <tr>
-                <th><span><h5>ID</h5></span></th>
-                <th><span><h5>Title</h5></span></th>
-                <th><span><h5>Link</h5></span></th>
-                <th><span><h5>Description</h5></span></th>
-                <th><span><h5>Company</h5></span></th>
-                <th><span><h5>City</h5></span></th>
-                <th></th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr *ngFor="let job of jobs ;trackBy: trackId">
-                    <td><a [routerLink]="['/job', job.id, 'view' ]"><h6>{{job.id}}</h6></a></td>
-                    <td><h6>{{job.jobTitle}}</h6></td>
-                    <td><h6><a [href]=job.jobLink>{{job.jobLink}}</a></a></td>
-                    <td><h6>{{job.jobDesc}}</h6></td>
-                    <td><h6>{{job.company}}</h6></td>
-                    <td><h6>{{job.city}}</h6></td>
-                    <td class="text-right">
-                        <div class="btn-group flex-btn-group-container">
-                            <button type="submit"
-                                    [routerLink]="['/job', job.id, 'view' ]"
-                                    class="btn btn-info btn-sm">
-                                <fa-icon [icon]="'eye'"></fa-icon>
-                                <span class="d-none d-md-inline">View</span>
+            <h2>
+                <span>Job Search</span>
+            </h2>
+            <div class="row">
+                <div class="col-sm-12">
+                    <form name="searchForm" class="form-inline">
+                        <div class="input-group w-100 mt-3">
+                            <input type="text" class="form-control" [(ngModel)]="currentSearch" id="currentSearch"
+                                   name="currentSearch" placeholder="Search">
+                            <button class="input-group-append btn btn-info" (click)="search(currentSearch)">
+                                <fa-icon [icon]="'search'"></fa-icon>
                             </button>
-                            <button type="submit"
-                                    [routerLink]="['/job', job.id, 'edit']"
-                                    class="btn btn-primary btn-sm">
-                                <fa-icon [icon]="'pencil-alt'"></fa-icon>
-                                <span class="d-none d-md-inline">Edit</span>
-                            </button>
-                            <button type="submit"
-                                    [routerLink]="['/', { outlets: { popup: 'job/'+ job.id + '/delete'} }]"
-                                    replaceUrl="true"
-                                    queryParamsHandling="merge"
-                                    class="btn btn-danger btn-sm">
-                                <fa-icon [icon]="'times'"></fa-icon>
-                                <span class="d-none d-md-inline">Delete</span>
+                            <button class="input-group-append btn btn-danger" (click)="clear()" *ngIf="currentSearch">
+                                <fa-icon [icon]="'trash-alt'"></fa-icon>
                             </button>
                         </div>
-                    </td>
-                </tr>
-                </tbody>
-            </table>
+                    </form>
+                </div>
+            </div>
+            <br/>
+            <div class="table-responsive" *ngIf="jobs">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th><span><h5>Job Title</h5></span></th>
+                        <th><span><h5>Job Desc</h5></span></th>
+                        <th><span><h5>Company</h5></span></th>
+                        <th><span><h5>City</h5></span></th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr *ngFor="let job of jobs ;trackBy: trackId">
+                        <td><h6><a [href]=job.jobLink>{{job.jobTitle}}</a></h6></td>
+                        <td><h6>{{job.jobDesc}}</h6></td>
+                        <td><h6>{{job.company}}</h6></td>
+                        <td><h6>{{job.city}}</h6></td>
+                    </tr><h6></h6>
+                    </tbody>
+                </table>
+            </div>
         </div>
-</div>
-</div>
+    </div>
 </div>

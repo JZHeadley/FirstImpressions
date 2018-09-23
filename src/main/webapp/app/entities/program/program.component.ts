@@ -10,7 +10,8 @@ import { ProgramService } from './program.service';
 
 @Component({
     selector: 'jhi-program',
-    templateUrl: './program.component.html'
+    templateUrl: './program.component.html',
+    styleUrls: ['program.component.scss']
 })
 export class ProgramComponent implements OnInit, OnDestroy {
     programs: IProgram[];

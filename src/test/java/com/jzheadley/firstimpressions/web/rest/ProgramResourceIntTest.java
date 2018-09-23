@@ -52,6 +52,9 @@ public class ProgramResourceIntTest {
     private static final String DEFAULT_PROGRAM_DESC = "AAAAAAAAAA";
     private static final String UPDATED_PROGRAM_DESC = "BBBBBBBBBB";
 
+    private static final String DEFAULT_PROGRAM_STATE = "AAAAAAAAAA";
+    private static final String UPDATED_PROGRAM_STATE = "BBBBBBBBBB";
+
     @Autowired
     private ProgramRepository programRepository;
 
@@ -100,7 +103,8 @@ public class ProgramResourceIntTest {
         Program program = new Program()
             .programTitle(DEFAULT_PROGRAM_TITLE)
             .programLink(DEFAULT_PROGRAM_LINK)
-            .programDesc(DEFAULT_PROGRAM_DESC);
+            .programDesc(DEFAULT_PROGRAM_DESC)
+            .programState(DEFAULT_PROGRAM_STATE);
         return program;
     }
 
@@ -127,6 +131,7 @@ public class ProgramResourceIntTest {
         assertThat(testProgram.getProgramTitle()).isEqualTo(DEFAULT_PROGRAM_TITLE);
         assertThat(testProgram.getProgramLink()).isEqualTo(DEFAULT_PROGRAM_LINK);
         assertThat(testProgram.getProgramDesc()).isEqualTo(DEFAULT_PROGRAM_DESC);
+        assertThat(testProgram.getProgramState()).isEqualTo(DEFAULT_PROGRAM_STATE);
 
         // Validate the Program in Elasticsearch
         verify(mockProgramSearchRepository, times(1)).save(testProgram);
@@ -167,7 +172,8 @@ public class ProgramResourceIntTest {
             .andExpect(jsonPath("$.[*].id").value(hasItem(program.getId().intValue())))
             .andExpect(jsonPath("$.[*].programTitle").value(hasItem(DEFAULT_PROGRAM_TITLE.toString())))
             .andExpect(jsonPath("$.[*].programLink").value(hasItem(DEFAULT_PROGRAM_LINK.toString())))
-            .andExpect(jsonPath("$.[*].programDesc").value(hasItem(DEFAULT_PROGRAM_DESC.toString())));
+            .andExpect(jsonPath("$.[*].programDesc").value(hasItem(DEFAULT_PROGRAM_DESC.toString())))
+            .andExpect(jsonPath("$.[*].programState").value(hasItem(DEFAULT_PROGRAM_STATE.toString())));
     }
     
     @Test
@@ -183,7 +189,8 @@ public class ProgramResourceIntTest {
             .andExpect(jsonPath("$.id").value(program.getId().intValue()))
             .andExpect(jsonPath("$.programTitle").value(DEFAULT_PROGRAM_TITLE.toString()))
             .andExpect(jsonPath("$.programLink").value(DEFAULT_PROGRAM_LINK.toString()))
-            .andExpect(jsonPath("$.programDesc").value(DEFAULT_PROGRAM_DESC.toString()));
+            .andExpect(jsonPath("$.programDesc").value(DEFAULT_PROGRAM_DESC.toString()))
+            .andExpect(jsonPath("$.programState").value(DEFAULT_PROGRAM_STATE.toString()));
     }
 
     @Test
@@ -209,7 +216,8 @@ public class ProgramResourceIntTest {
         updatedProgram
             .programTitle(UPDATED_PROGRAM_TITLE)
             .programLink(UPDATED_PROGRAM_LINK)
-            .programDesc(UPDATED_PROGRAM_DESC);
+            .programDesc(UPDATED_PROGRAM_DESC)
+            .programState(UPDATED_PROGRAM_STATE);
 
         restProgramMockMvc.perform(put("/api/programs")
             .contentType(TestUtil.APPLICATION_JSON_UTF8)
@@ -223,6 +231,7 @@ public class ProgramResourceIntTest {
         assertThat(testProgram.getProgramTitle()).isEqualTo(UPDATED_PROGRAM_TITLE);
         assertThat(testProgram.getProgramLink()).isEqualTo(UPDATED_PROGRAM_LINK);
         assertThat(testProgram.getProgramDesc()).isEqualTo(UPDATED_PROGRAM_DESC);
+        assertThat(testProgram.getProgramState()).isEqualTo(UPDATED_PROGRAM_STATE);
 
         // Validate the Program in Elasticsearch
         verify(mockProgramSearchRepository, times(1)).save(testProgram);
@@ -284,7 +293,8 @@ public class ProgramResourceIntTest {
             .andExpect(jsonPath("$.[*].id").value(hasItem(program.getId().intValue())))
             .andExpect(jsonPath("$.[*].programTitle").value(hasItem(DEFAULT_PROGRAM_TITLE.toString())))
             .andExpect(jsonPath("$.[*].programLink").value(hasItem(DEFAULT_PROGRAM_LINK.toString())))
-            .andExpect(jsonPath("$.[*].programDesc").value(hasItem(DEFAULT_PROGRAM_DESC.toString())));
+            .andExpect(jsonPath("$.[*].programDesc").value(hasItem(DEFAULT_PROGRAM_DESC.toString())))
+            .andExpect(jsonPath("$.[*].programState").value(hasItem(DEFAULT_PROGRAM_STATE.toString())));
     }
 
     @Test
