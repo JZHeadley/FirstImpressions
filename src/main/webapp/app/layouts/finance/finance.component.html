@@ -8,29 +8,36 @@
             <h6>
                 Conduct your own research using our resource links. There are many loans for small businesses, scholarships, and grants that exist to aid former convicts as they rebuild their lives. Don't forget to browse advice on budgeting, financial planning and long-term goals, and handling taxes. 
             </h6>
-
-             <div class="table-responsive" *ngIf="jobs">
+</br>
+             <div class="table-responsive">
                 <table class="table table-striped">
-                    <thead>
-                    <tr>
-                        <th><span><h5>Job Title</h5></span></th>
-                        <th><span><h5>Job Desc</h5></span></th>
-                        <th><span><h5>Company</h5></span></th>
-                        <th><span><h5>City</h5></span></th>
-                        <th></th>
-                    </tr>
-                    </thead>
                     <tbody>
-                    <tr *ngFor="let job of jobs ;trackBy: trackId">
-                        <td><h6><a [href]=job.jobLink>{{job.jobTitle}}</a></h6></td>
-                        <td><h6>{{job.jobDesc}}</h6></td>
-                        <td><h6>{{job.company}}</h6></td>
-                        <td><h6>{{job.city}}</h6></td>
-                    </tr><h6></h6>
+                    <tr>
+                        <td><h6><a href="https://www.creditkarma.com">Credit Karma</a></h6></td>
+                    </tr>
+                    <tr>
+                        <td><h6><a href="https://helpforfelons.org/scholarships-for-felons/">Scholarships for Felons</a></h6></td>
+                    </tr>
+                    <tr>
+                        <td><h6><a href="https://turbotax.intuit.com/">Turbotax</a></h6></td>
+                    </tr>
+                    <tr>
+                        <td><h6><a href="https://www.nerdwallet.com/l/grow-your-money">Nerd Wallet - Grow Your Money</a></h6></td>
+                    </tr>
+                    <tr>
+                        <td><h6><a href="https://foundationforfinancialplanning.org/consumer-resources/">Consumer Financial Planning</a></h6></td>
+                    </tr>
                     </tbody>
+
                 </table>
             </div>
 
 
         </div>
     </div>
+
+
+
+
+
+

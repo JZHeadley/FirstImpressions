@@ -12,6 +12,12 @@
     align-items: center;
     flex-direction: column;
 }
+a {
+    color: inherit;
+}
+a:hover {
+    color: #30c1d2;
+}
 
 h2 {
     font-size: 20px;
