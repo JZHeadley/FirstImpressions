@@ -20,6 +20,9 @@ import { FirstImpressionsEntityModule } from './entities/entity.module';
 import * as moment from 'moment';
 // jhipster-needle-angular-add-module-import JHipster will add new module here
 import { JhiMainComponent, NavbarComponent, FooterComponent, PageRibbonComponent, ErrorComponent } from './layouts';
+import { TransportComponent } from './layouts/transport/transport.component';
+import { LegalCounselComponent } from './layouts/legal-counsel/legal-counsel.component';
+import { FinanceComponent } from './layouts/finance/finance.component';
 
 @NgModule({
     imports: [
@@ -33,7 +36,16 @@ import { JhiMainComponent, NavbarComponent, FooterComponent, PageRibbonComponent
         FirstImpressionsEntityModule
         // jhipster-needle-angular-add-module JHipster will add new module here
     ],
-    declarations: [JhiMainComponent, NavbarComponent, ErrorComponent, PageRibbonComponent, FooterComponent],
+    declarations: [
+        JhiMainComponent,
+        NavbarComponent,
+        ErrorComponent,
+        PageRibbonComponent,
+        FooterComponent,
+        TransportComponent,
+        LegalCounselComponent,
+        FinanceComponent
+    ],
     providers: [
         {
             provide: HTTP_INTERCEPTORS,

@@ -42,7 +42,7 @@
             <tr *ngFor="let job of jobs ;trackBy: trackId">
                 <td><a [routerLink]="['/job', job.id, 'view' ]">{{job.id}}</a></td>
                 <td>{{job.jobTitle}}</td>
-                <td>{{job.jobLink}}</td>
+                <td><a [href]=job.jobLink>{{job.jobLink}}</a></td>
                 <td>{{job.jobDesc}}</td>
                 <td>{{job.company}}</td>
                 <td>{{job.city}}</td>
