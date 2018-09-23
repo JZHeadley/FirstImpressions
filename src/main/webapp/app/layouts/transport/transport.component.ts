@@ -6,7 +6,14 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['transport.component.scss']
 })
 export class TransportComponent implements OnInit {
+    currentAccount: any;
+    currentSearch: string;
+
     constructor() {}
 
     ngOnInit() {}
+
+    search(searchString) {}
+
+    clear() {}
 }
