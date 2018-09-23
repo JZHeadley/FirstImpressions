@@ -1,0 +1,32 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.jzheadley.firstimpressions"
+    },
+    "jhipsterVersion": "5.3.4",
+    "applicationType": "monolith",
+    "baseName": "FirstImpressions",
+    "packageName": "com.jzheadley.firstimpressions",
+    "packageFolder": "com/jzheadley/firstimpressions",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "mysql",
+    "searchEngine": "elasticsearch",
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "NTIwOTM1NmZkM2ZhNzY5YTJlYWRmY2E4ZDk1YjA2YWE2OGRmMzY0YWZjZTAwOGFiYWJmMWZlM2Y3NWI3MjJlNThmZjRmZjE1MzQ3ZjFkYzRjYjE2OTAyOGYxNzVkY2E2Nzg0MzAzY2U3ZjQyY2VjNWYyYzliOTdjNTNhNWNhNDg=",
+    "clientFramework": "angularX",
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "enableTranslation": false
+  }
+}

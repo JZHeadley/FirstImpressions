@@ -1,0 +1,39 @@
+entity Job {
+    jobTitle String,
+   jobLink String,
+   jobDesc String,
+   company String,
+   city String
+}
+
+entity Program {
+   programTitle String,
+   programLink String,
+   programDesc String
+}
+
+entity Location {
+    buildingNumber Integer,
+   streetName String,
+   city String,
+   state String,
+   zipCode Integer
+}
+
+entity ClothingCompany {
+    companyName String,
+    companyDesc String    
+}
+
+entity OnlineTraining {
+    trainingLink String,
+   desc String
+}
+
+entity InterviewResources {
+    resourceLink String,
+   desc String
+}
+relationship OneToOne {
+ ClothingCompany{companyLocation} to Location
+}
