@@ -10,7 +10,8 @@ import { JobService } from './job.service';
 
 @Component({
     selector: 'jhi-job',
-    templateUrl: './job.component.html'
+    templateUrl: './job.component.html',
+    styleUrls: ['job.component.scss']
 })
 export class JobComponent implements OnInit, OnDestroy {
     jobs: IJob[];

@@ -5,12 +5,9 @@
     only screen and (min-device-pixel-ratio: 2),
     only screen and (min-resolution: 192dpi),
     only screen and (min-resolution: 2dppx) {
-    .hipster {
-        background: url('../../content/images/hipster2x.png') no-repeat center top;
-        background-size: contain;
-    }
 }
 .container-positioning {
+    top: 20%;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -22,6 +19,11 @@ h2 {
 }
 h6 {
     font-size: 14px;
+    font-weight: 200;
+    margin-bottom: 1.5rem;
+}
+h5 {
+    font-size: 12px;
     font-weight: 200;
     margin-bottom: 1.5rem;
 }
@@ -57,16 +59,12 @@ h6 {
 }
 
 button {
-    position: absolute;
-    bottom: 14%;
     background-color: #30c1d2;
     border-radius: 2px;
     color: white;
     font-size: 14px;
     border: none;
-    padding: 5px 10px;
-    width: 150px;
-    transition: all 0.1s ease-in-out;
+    padding: 5px 15px;
 }
 button:hover {
     background-color: #353d47;

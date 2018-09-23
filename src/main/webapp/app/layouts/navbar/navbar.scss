@@ -12,29 +12,39 @@ Navbar
 .nav-content {
     width: 100%;
 }
-
+.right {
+    float: right;
+}
 .jh-navbar {
     width: 100%;
     margin: 0 auto;
     background-color: #353d47;
     text-align: center;
     padding: 0.75em 1em;
+    .nav-link.active,
     .dropdown-item.active,
     .dropdown-item.active:focus,
     .dropdown-item.active:hover {
-        background-color: #353d47;
+        background-color: #30c1d2;
+        border-radius: 4px;
     }
     .dropdown-toggle::after {
         margin-left: 0.15em;
     }
     ul.navbar-nav {
-        padding: 0.5em;
+        padding: 0.2em 0.5em;
         .nav-item {
-            margin-left: 1.5rem;
+            margin-left: 0.75rem;
+            margin-right: 0.75rem;
         }
     }
     a.nav-link {
         font-weight: 400;
+        transition: all 0.1s ease-in;
+        &:hover {
+            background-color: #30c1d2;
+            border-radius: 4px;
+        }
     }
     .jh-navbar-toggler {
         color: #ccc;
